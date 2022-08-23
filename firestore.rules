@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+  	//mfes
+    match /mfes/{mfe} {
+      allow read: if true;
+      allow create, write, update: if false;
+    }
+    
+    //congregation
+    match /congregation/{congregation} {
+      allow read: if true;
+      // allow write: if true;
+
+      allow create: if request.resource.data.keys().hasAll(['nome']) &&
+      	get(/databases/$(database)/documents/verifica/abc).data.permite == true;
+    }
+  }
+}
