@@ -5,6 +5,7 @@ export const getSystemjs = async (
   _: functions.https.Request,
   response: functions.Response<unknown>
 ) => {
+  response.set("Access-Control-Allow-Origin", "*");
   const collection = admin.firestore().collection("mfes");
 
   const list = await collection.get();
