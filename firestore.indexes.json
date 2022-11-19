@@ -1,4 +1,10 @@
 {
-  "indexes": [],
+  "indexes": [
+    {
+      "collectionGroup": "publishers",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [{ "fieldPath": "email", "order": "ASCENDING" }]
+    }
+  ],
   "fieldOverrides": []
 }
