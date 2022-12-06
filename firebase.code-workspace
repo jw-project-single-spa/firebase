@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Firebase",
+			"path": "."
+		},
+		{
+			"name": "Functions",
+			"path": "./functions"
+		},
+	],
+	"settings": {}
+}
